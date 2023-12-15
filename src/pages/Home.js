@@ -1,4 +1,3 @@
-export default loadHome
 
 
 function loadHome() {
@@ -16,3 +15,5 @@ welcomeP.textContent = "Lorem Ipsum is simply dummy text of the printing and typ
 homeTab.appendChild(welcomeP)
 
 }
+
+export default loadHome

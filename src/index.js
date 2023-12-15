@@ -1,9 +1,10 @@
 console.log("hotdog")
 import './style.css'
 import loadHome from './pages/Home'
+import loadAbout from './pages/About'
 
 (function loadSite() {
-    
+
     const body = document.querySelector('body')
     const content = document.querySelector("#content")
     
@@ -21,33 +22,52 @@ import loadHome from './pages/Home'
 
     const homeSelect = document.createElement('div')
     homeSelect.textContent = "Home"
-    homeSelect.classList.add("active")
+    homeSelect.classList.add("homeBtn", "active")
     navigation.appendChild(homeSelect)
 
     const menuSelect = document.createElement('div')
-    menuSelect.classList.add("inactive")
+    menuSelect.classList.add("menuBtn", "inactive" )
     menuSelect.textContent = "Menu"
     navigation.appendChild(menuSelect)
 
     const aboutSelect = document.createElement('div')
     aboutSelect.textContent = "About"
-    aboutSelect.classList.add("inactive")
+    aboutSelect.classList.add("aboutBtn", "inactive")
     navigation.appendChild(aboutSelect)
 
     navigation.addEventListener('click', (e) => {
-            console.log(e)
-            let target = e.textContent
+            
+            let target = e.target.classList
+            console.log(target)
+            
+
+      /* Create separate module too handle this */
+            if(target[0] == "aboutBtn"){
+                content.textContent= ""
+                aboutSelect.classList.remove("inactive")
+                aboutSelect.classList.add("active")
+                if(homeSelect.classList[1] == "active"){
+                    homeSelect.classList.remove("active")
+                    homeSelect.classList.add("inactive")
+                }
+
+                loadAbout()
+            }
+            
+
+            
             /* 
+            
             if Menu load Menu.js
-            if About load About.js
+            
             
             */
 
     })
 
-
-
     loadHome()
+    
+
 
 })()
 

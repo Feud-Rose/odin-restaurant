@@ -4,30 +4,63 @@ html {
 
 h1 {
     text-align: center;
-    margin: 0%;
+    margin-bottom: auto;
     background-color: #f5cb5c;
     width: fit-content;
     align-self: center;
     padding-left: 15px;
     padding-right: 15px;
+    
 }
 
 .banner {
     background-color: #333533;
-    height: fit-content;
-    padding: 15px 15px 0px 15px;
+    height: 20%vh;
+    min-height: 150px;
+    padding: 35px 15px 0px 15px;
     display: flex;
     flex-direction: column;
+    justify-content: end;
     gap: 16px;
 }
 
-.homeTab {
+.homeTab, .aboutTab {
     background-color: #f5cb5c;
     width: 70%;
+    max-width: 700px;
+    height: 80vh;
     margin: auto;
     padding: 16px;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
 
+.homeTab div {
+    font-size: 22px;
+    width:80%;
+    align-self: center;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.homeTab p {
+    width:70%;
+    align-self: center;
+}
+
+
+.aboutTab div {
+    font-size: 22px;
+    padding-bottom: 12px;
+    padding-left: 22px;
+    margin-top: auto;
+}
+
+.aboutTab img {
+    
+    margin: 15px auto auto auto;;
+    padding: 0px 15px 15px 15px;
 }
 
 .navigation {
