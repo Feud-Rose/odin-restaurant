@@ -1,10 +1,9 @@
 console.log("hotdog")
 import './style.css'
-
+import loadHome from './pages/Home'
 
 (function loadSite() {
     
-   
     const body = document.querySelector('body')
     const content = document.querySelector("#content")
     
@@ -20,31 +19,37 @@ import './style.css'
     navigation.classList.add('navigation')
     banner.appendChild(navigation)
 
+    const homeSelect = document.createElement('div')
+    homeSelect.textContent = "Home"
+    homeSelect.classList.add("active")
+    navigation.appendChild(homeSelect)
 
-    const home = document.createElement('div')
-    home.textContent = "Home"
-    navigation.appendChild(home)
+    const menuSelect = document.createElement('div')
+    menuSelect.classList.add("inactive")
+    menuSelect.textContent = "Menu"
+    navigation.appendChild(menuSelect)
 
-    const menu = document.createElement('div')
-    menu.textContent = "Menu"
-    navigation.appendChild(menu)
+    const aboutSelect = document.createElement('div')
+    aboutSelect.textContent = "About"
+    aboutSelect.classList.add("inactive")
+    navigation.appendChild(aboutSelect)
 
-    const about = document.createElement('div')
-    about.textContent = "About"
-    navigation.appendChild(about)
+    navigation.addEventListener('click', (e) => {
+            console.log(e)
+            let target = e.textContent
+            /* 
+            if Menu load Menu.js
+            if About load About.js
+            
+            */
+
+    })
 
 
 
-    const frontTab = document.createElement('div')
-    frontTab.classList.add("frontTab")
-    content.appendChild(frontTab)
-
-
-  
-
-   
-    
-    
+    loadHome()
 
 })()
+
+
 

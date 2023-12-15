@@ -1,20 +1,32 @@
+html {
+    font-family: Cabin;
+}
+
 h1 {
     text-align: center;
     margin: 0%;
+    background-color: #f5cb5c;
+    width: fit-content;
+    align-self: center;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .banner {
-    background-color: cadetblue;
+    background-color: #333533;
     height: fit-content;
-    padding: 32px;
+    padding: 15px 15px 0px 15px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.frontTab {
-    background-color: azure;
-
+.homeTab {
+    background-color: #f5cb5c;
+    width: 70%;
+    margin: auto;
+    padding: 16px;
+    font-size: 18px;
 
 }
 
@@ -23,9 +35,24 @@ h1 {
     display: flex;
     flex-direction: row;
     align-self: center;
-    gap:8px;
+    gap:12px;
+}
+.active{
+    background-color: #f5cb5c;
+}
+.inactive {
+    background-color: #ad9459;
+}
+.navigation div {
+    
+    font-size: 22px;
+    border-style: solid;
+    border-bottom-style: none;
+    padding: 5px 5px 0px 5px;
 }
 
-.navigation div {
-    border: 5px solid #1C6EA4;
+
+body {
+    background-color: #cfdbd5;
+    
 }
