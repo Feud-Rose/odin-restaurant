@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    margin: 0%;
+}
+
+.banner {
+    background-color: cadetblue;
+    height: fit-content;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.frontTab {
+    background-color: azure;
+
+
+}
+
+.navigation {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap:8px;
+}
+
+.navigation div {
+    border: 5px solid #1C6EA4;
+}
